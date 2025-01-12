@@ -22,6 +22,7 @@
   margin: 0 0 1rem;
   line-height: 1.15;
   font-size: 3.6rem;
+  color: #0070f3;
 }
 
 .title {
@@ -72,6 +73,7 @@
 .card h3 {
   margin: 0 0 1rem 0;
   font-size: 1.5rem;
+  text-align: center;
 }
 
 .card p {
