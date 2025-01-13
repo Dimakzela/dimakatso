@@ -1,9 +1,31 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
+import {FaGithub, FaLinkedin} from "react-icons/fa";
+import {MdOutlineMailOutline} from "react-icons/md";
+import {useState} from "react";
+import About from "../components/about";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Content from "../constant/constants";
+import Skills from "../components/skills";
 
 export default function Home() {
+
+    const [showAbout, setShowAbout] = useState(false);
+    const [showSkills, setShowSkills] = useState(false);
+
+    const handleShowAbout = () => setShowAbout(true);
+    const handleShowSKills = () => setShowSkills(true);
+
+    const handleClose = () => {
+        setShowAbout(false)
+        setShowSkills(false)
+    };
+
     return (
         <div>
+            <About show={showAbout} handleClose={handleClose}/>
+            <Skills show={showSkills} handleClose={handleClose}/>
+
             <div className={styles.container}>
                 <Head>
                     <title>Dimakatso</title>
@@ -14,6 +36,11 @@ export default function Home() {
 
                     <h1 className={styles.title}>
                         Dimakatso Bopape
+                        <span onClick={handleShowAbout}>
+                            <i>
+                                {Content.DETAILS}
+                            </i>
+                        </span>
                     </h1>
 
                     <div className={styles.description}>
@@ -21,20 +48,25 @@ export default function Home() {
                             <strong>Full Stack Developer</strong>
                         </div>
                         <code>Java, nodejs, Angular, React</code>
+                        <span onClick={handleShowSKills}>
+                            <i>
+                                {Content.DETAILS}
+                            </i>
+                        </span>
                     </div>
 
-                    {/*<div className={styles.grid}>
-                    <a href="https://nextjs.org/docs" className={styles.card}>
-                        <h3><i>Who am i?</i> &rarr;</h3>
-                        <p>Find in-depth information about me.</p>
-                    </a>
+                    <div className={styles.contact}>
 
-                    <a href="https://nextjs.org/learn" className={styles.card}>
-                        <h3>Skill &rarr;</h3>
-                        <p>Learn about my experience and skills!</p>
-                    </a>
-
-                </div>*/}
+                        <a href='https://github.com/Dimakzela' target="_blank">
+                            <FaGithub/>
+                        </a>
+                        <a href='https://www.linkedin.com/in/dimakatso-bopape-b8b403b6/' target="_blank">
+                            <FaLinkedin/>
+                        </a>
+                        <a href='mailto:dimakzela@gmail.com' target="_blank">
+                            <MdOutlineMailOutline/>
+                        </a>
+                    </div>
                 </main>
 
                 <footer>
