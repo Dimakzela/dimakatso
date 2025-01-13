@@ -47,7 +47,7 @@ export default function Home() {
                         <div>
                             <strong>Full Stack Developer</strong>
                         </div>
-                        <code>Java, nodejs, Angular, React</code>
+                        <code>Java, nodejs, Angular, React, React-native</code>
                         <span onClick={handleShowSKills}>
                             <i>
                                 {Content.DETAILS}
@@ -71,7 +71,7 @@ export default function Home() {
 
                 <footer>
                     <p>
-                        Developed by Dimaxsoftware
+                        Developed by <i style={{textDecoration: "underline"}}>Dimaxsoftware</i>
                     </p>
                 </footer>
 

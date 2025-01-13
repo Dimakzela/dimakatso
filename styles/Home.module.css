@@ -39,6 +39,10 @@
   font-size: 1.5rem;
 }
 
+.description span {
+  color: #d63384;
+}
+
 .description span,
 .title span {
   font-size: .8rem;
